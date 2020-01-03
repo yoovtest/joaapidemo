@@ -40,7 +40,7 @@ host | https://www.xxxx.com
 
 Update the OAuth Credentials at the end of the file
 ```
-YOOV_CLIENT_ID='**abcd-1234**'
+YOOV_CLIENT_ID='**abcd-12345**'
 YOOV_CLIENT_SECRET='123456-abcd-efgh-ijkl-7890abc'
 YOOV_REDIRECT_URI='https://www.xxxx.com/implicit/callback'
 YOOV_URL_AUTHORIZE='https://passport.yoov.com/auth/realms/yoov/protocol/openid-connect/auth'
@@ -59,8 +59,8 @@ It is important to note that the credentials is binded with host.
 Route | Description
 --- | ---
 https://www.xxxx.com/ | Entry url to connect with authorization server
-https://www.xxx.com/implicit/callback | Passive route to receive token from authorization server
-https://www.xxx.com/teams | Route to display team list. (It is the destination of redirection after token is received)
+https://www.xxxx.com/implicit/callback | Passive route to receive token from authorization server
+https://www.xxxx.com/teams | Route to display team list. (It is the destination of redirection after token is received)
 
 
 ------------
