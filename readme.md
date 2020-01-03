@@ -1,9 +1,11 @@
 # Basic Example of Connection to JOA API with PHP
 
-It makes use of "thephppleague / oauth2-client" under Laravel framework.
+It makes use of "thephppleague/oauth2-client" under Laravel framework.
 
 1. Laravel 5.5
-2. thephphpleague / oauth2-client
+2. thephphpleague/oauth2-client
+
+When you install this project, the above two items have been included.
 
 * It is assumed you are familiar with the following technology:
 ```
