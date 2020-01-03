@@ -33,7 +33,7 @@ client_id | abcd-12345
 secret | 123456-abcd-efgh-ijkl-7890abc
 scope | oa:team:read, oa:employee:read
 grant type | authorization code
-issuer | ![https://passport.yoov.com/auth/realms/yoov]()
+issuer | ![](https://passport.yoov.com/auth/realms/yoov)
 authorize Url | https://passport.yoov.com/auth/realms/yoov/protocol/openid-connect/auth
 token Url | https://passport.yoov.com/auth/realms/yoov/protocol/openid-connect/token
 host | https://www.xxxx.com
