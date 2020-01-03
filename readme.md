@@ -50,6 +50,16 @@ YOOV_SCOPES='oa:team:read, oa:employee:read'
 ```
 It is important to note that the credentials is binded with host. It must be exactly as that confirmed by provider.
 
+Generate application key:
+It is a key required for each Laravel application.
+
+```
+/www/joaapidemo$ php artisan key:generate
+```
+```
+Application key [base64:0AKzB3gQo5sw6QQ2aEFZ7bVMtFk7aTRJhpwTwLRoLwc=] set successfully.
+```
+
 ### Routes
 
 ```
