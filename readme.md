@@ -18,7 +18,7 @@ Install required packages using Composer
    
 Make a copy of .env from .env.example
 
-    /www/joaapidemo$ copy .env.example .env
+    /www/joaapidemo$ cp .env.example .env
 	
 Edit ~/.env:
 ```
