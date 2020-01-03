@@ -13,20 +13,33 @@ Clone the project using Git:
 /www/joaapidemo$
 ```
 Install required packages using Composer
-```
-/www/joaapidemo$ composer install
-```
+   
+    /www/joaapidemo$ composer install
+   
 Make a copy of .env from .env.example
-```
-/www/joaapidemo$ copy .env.example .env
-```
+
+    /www/joaapidemo$ copy .env.example .env
+	
 Edit ~/.env:
 ```
 /www/joaapidemo$ vi .env
 ```
+
+Assume your OAuth credentials provided by API provider as below:
+
+Field | Value
+--- | ---
+secret | 123456-abcd-efgh-ijkl-7890abc
+scope | oa:team:read, oa:employee:read
+grant type | authorization code
+issuer | https://passport.yoov.com/auth/realms/yoov
+authorize Url | https://passport.yoov.com/auth/realms/yoov/protocol/openid-connect/auth
+token Url | https://passport.yoov.com/auth/realms/yoov/protocol/openid-connect/token
+host | https://www.xxxx.com
+
 Update the OAuth Credentials at the end of the file
 ```
-YOOV_CLIENT_ID='abcd-1234'
+YOOV_CLIENT_ID='**abcd-1234**'
 YOOV_CLIENT_SECRET='123456-abcd-efgh-ijkl-7890abc'
 YOOV_REDIRECT_URI='https://www.xxxx.com/implicit/callback'
 YOOV_URL_AUTHORIZE='https://passport.yoov.com/auth/realms/yoov/protocol/openid-connect/auth'
@@ -34,27 +47,33 @@ YOOV_URL_ACCESS_TOKEN='https://passport.yoov.com/auth/realms/yoov/protocol/openi
 YOOV_URL_RESOURCE_OWNER_DETAILS=''
 YOOV_SCOPES='oa:team:read, oa:employee:read'
 ```
-Assume your OAuth credentials provided by API provider as below:
-
-Field|Value
------|-----
-secret|123456-abcd-efgh-ijkl-7890abc
-scope | oa:team:read, oa:employee:read
-grant type | authorization code
-issuer | https//passport.yoov.com/auth/realms/yoov
-authorize Url | https://passport.yoov.com/auth/realms/yoov/protocol/openid-connect/auth
-token Url | https://passport.yoov.com/auth/realms/yoov/protocol/openid-connect/token
-host | https://www.xxxx.com
-
-It is important to note that the host used in YOOV_REDIRECT_URI must be exactly the same as that provided.
-Then you can give it by appending the route you wnat to use:
+It is important to note that the host used in YOOV_REDIRECT_URI must be exactly the same as that provided. If you want the route of callback url is "/implicit/callback", you can set it as:
 ```
-https://www.xxxx.com/callback
 https://www.xxxx.com/implicit/callback
-https://www.xxxx.com/myroute
-...
 ```
 Edit ~/App/Routes:
+```
+/www/joaapidemo/App/Routes $ vi web.php
+```
+
+```
+<?php
+/*
+|--------------------------------------------------------------------------
+| Web Routes
+|--------------------------------------------------------------------------
+|
+| Here is where you can register web routes for your application. These
+| routes are loaded by the RouteServiceProvider within a group which
+| contains the "web" middleware group. Now create something great!
+|
+*/
+
+Route::get('/', 'HomeController@index');
+Route::get('/teams', 'HomeController@getTeams');
+Route::get('/implicit/callback', 'HomeController@callback');
+
+```
 
 Edit App/Http/Controllers/HomeController
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as:
@@ -104,3 +123,6 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+------------
+
