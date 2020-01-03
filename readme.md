@@ -45,7 +45,7 @@ grant type | grant_type
 issuer | https:/<span>/<span>ww<span>w.</span>abc.com/auth/realms/abc
 authorize Url | https:/<span>/<span>ww<span>w.</span>abc.com/auth/realms/abc/protocol/openid-connect/auth
 token Url | https:/<span>/<span>ww<span>w.</span>abc.com/auth/realms/abc/protocol/openid-connect/token
-host | https:/<span>/www.x</span>xxx.com
+host | https:/<span>/<span>ww<span>w.x</span>xxx.com
 
 Update the OAuth Credentials at the end of the file
 ```
