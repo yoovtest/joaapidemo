@@ -5,6 +5,8 @@ It makes use of "thephppleague / oauth2-client" under Laravel framework.
 1. Laravel 5.5
 2. thephphpleague / oauth2-client
 
+* It is assumed you are familiar with Laravel operation.
+
 ## Install
 Clone the project using Git:
 ```
@@ -73,6 +75,12 @@ Route | Description
 https://www.xxxx.com/ | Entry url to connect with authorization server
 https://www.xxxx.com/implicit/callback | Passive route to receive token from authorization server
 https://www.xxxx.com/teams | Route to display team list. (It is the destination of redirection after token is received)
+
+
+### Update to vhost settings of your web server
+
+Ensure you can reach your web page via entry url. (https://www.xxxx.com in this example)
+
 
 ### Start
 
