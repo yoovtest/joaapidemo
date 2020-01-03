@@ -6,14 +6,10 @@ It makes use of "thephppleague / oauth2-client" under Laravel framework.
 2. thephphpleague / oauth2-client
 
 ## Install
-
-Clone the project using git:
-    $ git clone https://github.com/yoovtest/joaapidemo.git
-    $ cd joaapidemo
 Via Composer
-    $ composer install 
-Edit App/Http/Controllers/HomeController.php
-
+```
+$ composer install
+```
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as:
 
 - [Simple, fast routing engine](https://laravel.com/docs/routing).
