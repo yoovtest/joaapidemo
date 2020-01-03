@@ -159,11 +159,11 @@ It will be redirected to YOOV Login Page.
 
  After login, it will be redirected to https://<span></span>www.xxxx.com/implicit/callback.
  
- ![](https://drive.google.com/uc?export=view&id=1MlWtud5lduqX6dO3wqiuvmylGwE_rS0z)
+ ![](https://drive.google.com/uc?export=view&id=1i8NhYwDTl3wiu2R_r7QulX3vUs0y3Uwq)
  
  ### Next
  
- Use debugger in Chrome for access to https://joa.yoov.com.
+ Use debugger in Chrome during access to https://joa.yoov.com.
  Check how each API url being used.
  
  In this project, the Logout function is given as an example. You can refer to the following files for basic operations:
