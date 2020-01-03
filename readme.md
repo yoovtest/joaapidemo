@@ -24,7 +24,7 @@ Edit ~/.env:
 ```
 /www/joaapidemo$ vi .env
 ```
-Update the OAuth Credentials at the end of the .env
+Update the OAuth Credentials at the end of the file
 ```
 YOOV_CLIENT_ID='abcd-1234'
 YOOV_CLIENT_SECRET='123456-abcd-efgh-ijkl-7890abc'
@@ -35,6 +35,7 @@ YOOV_URL_RESOURCE_OWNER_DETAILS=''
 YOOV_SCOPES='oa:team:read, oa:employee:read'
 ```
 Assume your OAuth credentials provided by API provider as below:
+
 client_id | abcd-1234
 --------- | ---------
 secret | 123456-abcd-efgh-ijkl-7890abc
