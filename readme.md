@@ -70,15 +70,15 @@ Application key [base64:0AKzB3gQo5sw6QQ2aEFZ7bVMtFk7aTRJhpwTwLRoLwc=] set succes
 
 Route | Description
 --- | ---
-https://<span></span>www.xxxx.com/ | Entry url to connect with authorization server
-https://<span></span>www.xxxx.com/implicit/callback | Passive route to receive token from authorization server
-https://<span></span>www.xxxx.com/teams | Route to display team list. (It is the destination of redirection after token is received)
+https://www.xxxx.com/ | Entry url to connect with authorization server
+https://www.xxxx.com/implicit/callback | Passive route to receive token from authorization server
+https://www.xxxx.com/teams | Route to display team list. (It is the destination of redirection after token is received)
 
 ### Start
 
 In browser, enter the url:
 ```
-https://<span></span>www.xxxx.com
+https://www.xxxx.com
 ```
 
 It will be redirected to YOOV Login Page.
