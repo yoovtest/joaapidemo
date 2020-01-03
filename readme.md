@@ -40,22 +40,22 @@ Field | Value
 --- | ---
 client_id | abcd-12345
 secret | 123456-abcd-efgh-ijkl-7890abc
-scope | oa:team:read, oa:employee:read
-grant type | authorization code
-issuer | https://<span></span>passport.yoov.com/auth/realms/yoov
-authorize Url | https://<span></span>passport.yoov.com/auth/realms/yoov/protocol/openid-connect/auth
-token Url | https://<span></span>passport.yoov.com/auth/realms/yoov/protocol/openid-connect/token
-host | http<span>s://www</span>.xxxx.com
+scope | abc:read, def:read
+grant type | grant_type
+issuer | https:/<span>/<span>ww<span>w.</span>abc.com/auth/realms/abc
+authorize Url | https:/<span>/<span>ww<span>w.</span>abc.com/auth/realms/abc/protocol/openid-connect/auth
+token Url | https:/<span>/<span>ww<span>w.</span>abc.com/auth/realms/abc/protocol/openid-connect/token
+host | https:/<span>/<span>ww<span>w.x</span>xxx.com
 
 Update the OAuth Credentials at the end of the file
 ```
 YOOV_CLIENT_ID='abcd-12345'
-YOOV_CLIENT_SECRET='123456-abcd-efgh-ijkl-7890abc'
+YOOV_CLIENT_SECRET='123456-abcd-efgh-ijkl-7890abc}'
 YOOV_REDIRECT_URI='https://www.xxxx.com/implicit/callback'
-YOOV_URL_AUTHORIZE='https://passport.yoov.com/auth/realms/yoov/protocol/openid-connect/auth'
-YOOV_URL_ACCESS_TOKEN='https://passport.yoov.com/auth/realms/yoov/protocol/openid-connect/token'
+YOOV_URL_AUTHORIZE='https://www.abc.com/auth/realms/abc/protocol/openid-connect/auth'
+YOOV_URL_ACCESS_TOKEN='https://www.abc.com/auth/realms/abc/protocol/openid-connect/token'
 YOOV_URL_RESOURCE_OWNER_DETAILS=''
-YOOV_SCOPES='oa:team:read, oa:employee:read'
+YOOV_SCOPES='abc:read, def:read'
 ```
 It is important to note that the credentials is binded with host. It must be exactly as that confirmed by provider.
 
@@ -86,7 +86,7 @@ https://www.xxxx.com/teams | Route to display team list. (It is the destination 
 
 ### Update to vhost settings of your web server
 
-Ensure you can reach ther web page via the entry url. (https://www.xxxx.com in this example)
+Ensure you can reach ther web page via the entry url. (http<span>s://w</span>ww.xxxx.com in this example)
 
 #### Example for Nginx
 /etc/nginx/sites-available/joaapidemo
@@ -157,8 +157,22 @@ It will be redirected to YOOV Login Page.
 
 ![](https://drive.google.com/uc?export=view&id=1T-hAHtmJK7KNZkCFoQ0VZJQTz5bPkDVS)
 
- After login, it will be redirected to https://<span></span>www.xxxx.com/implicit/callback.
+ After login, it will be redirected to https://<span></span>www<span>.xxxx.</span>com/implicit/callback.
  
- ![](https://drive.google.com/uc?export=view&id=1MlWtud5lduqX6dO3wqiuvmylGwE_rS0z)
+ ![](https://drive.google.com/uc?export=view&id=1i8NhYwDTl3wiu2R_r7QulX3vUs0y3Uwq)
+ 
+ ### Next
+ 
+ Use debugger in Chrome during access to https://joa.yoov.com.
+ Check how each API url is being used.
+ 
+ In this project, Team access function and Logout function are given as an example. You can study the following files for the operation.:
+ ```
+ ~/App/Http/Controllers/HomeController.php
+ ~/resources/views/home.blade.php
+ ~/App/routes/web.php
+ ```
+ 
+ 
  
 ------------
