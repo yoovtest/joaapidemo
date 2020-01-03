@@ -82,5 +82,7 @@ https://www.xxxx.com
 ```
 
 It will be redirected to YOOV Login Page. After login, it will be redirected to https://www.xxxx.com/implicit/callback.
+
 ![](https://drive.google.com/file/d/1T-hAHtmJK7KNZkCFoQ0VZJQTz5bPkDVS/view?usp=sharing)
+
 ------------
