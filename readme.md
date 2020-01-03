@@ -42,18 +42,18 @@ client_id | abcd-12345
 secret | 123456-abcd-efgh-ijkl-7890abc
 scope | abc:read, def:read
 grant type | grant_type
-issuer | http<span>s://</span>www.abc.com/auth/realms/abc
-authorize Url | http<span>s://</span>www.abc.com/auth/realms/abc/protocol/openid-connect/auth
-token Url | http<span>s://</span>www.abc.com/auth/realms/abc/protocol/openid-connect/token
-host | http<span>s://</span>www.xxxx.com
+issuer | https:/<span>/www.a</span>bc.com/auth/realms/abc
+authorize Url | https:/<span>/www.a</span>bc.com/auth/realms/abc/protocol/openid-connect/auth
+token Url | https:/<span>/www.a</span>bc.com/auth/realms/abc/protocol/openid-connect/token
+host | https:/<span>/www.x</span>xxx.com
 
 Update the OAuth Credentials at the end of the file
 ```
 YOOV_CLIENT_ID='abcd-12345'
 YOOV_CLIENT_SECRET='123456-abcd-efgh-ijkl-7890abc}'
-YOOV_REDIRECT_URI='https:/<span>/www.x</span>xxx.com/implicit/callback'
-YOOV_URL_AUTHORIZE='http<span>s://</span>www.abc.com/auth/realms/abc/protocol/openid-connect/auth'
-YOOV_URL_ACCESS_TOKEN='http<span>s://</span>www.abc.com/auth/realms/abc/protocol/openid-connect/token'
+YOOV_REDIRECT_URI='https://www.xxxx.com/implicit/callback'
+YOOV_URL_AUTHORIZE='https://www.abc.com/auth/realms/abc/protocol/openid-connect/auth'
+YOOV_URL_ACCESS_TOKEN='https://www.abc.com/auth/realms/abc/protocol/openid-connect/token'
 YOOV_URL_RESOURCE_OWNER_DETAILS=''
 YOOV_SCOPES='abc:read, def:read'
 ```
