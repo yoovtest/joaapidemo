@@ -164,7 +164,7 @@ It will be redirected to YOOV Login Page.
  ### Next
  
  Use debugger in Chrome during access to https://joa.yoov.com.
- Check how each API url being used.
+ Check how each API url is being used.
  
  In this project, Team access function and Logout function are given as an example. You can study the following files for the operation.:
  ```
