@@ -56,7 +56,7 @@ It is a key required for each Laravel application.
 ```
 /www/joaapidemo$ php artisan key:generate
 ```
-```
+``` Output
 Application key [base64:0AKzB3gQo5sw6QQ2aEFZ7bVMtFk7aTRJhpwTwLRoLwc=] set successfully.
 ```
 
