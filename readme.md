@@ -71,19 +71,6 @@ Output:
 Application key [base64:0AKzB3gQo5sw6QQ2aEFZ7bVMtFk7aTRJhpwTwLRoLwc=] set successfully.
 ```
 
-### Routes
-
-```
-~/App/routes/web.php
-```
-
-Route | Description
---- | ---
-https://www.xxxx.com/ | Entry url to connect with authorization server
-https://www.xxxx.com/implicit/callback | Passive route to receive token from authorization server
-https://www.xxxx.com/teams | Route to display team list. (It is the destination of redirection after token is received)
-
-
 ### Update to vhost settings of your web server
 
 Ensure you can reach ther web page via the entry url. (http<span>s://w</span>ww.xxxx.com in this example)
