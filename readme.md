@@ -36,7 +36,7 @@ grant type | authorization code
 issuer | https://<span></span>passport.yoov.com/auth/realms/yoov
 authorize Url | https://<span></span>passport.yoov.com/auth/realms/yoov/protocol/openid-connect/auth
 token Url | https://<span></span>passport.yoov.com/auth/realms/yoov/protocol/openid-connect/token
-host | https://<span></span>www.xxxx.<span></span>com
+host | https://www\.xxxx\.com
 
 Update the OAuth Credentials at the end of the file
 ```
