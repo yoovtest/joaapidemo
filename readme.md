@@ -79,8 +79,64 @@ https://www.xxxx.com/teams | Route to display team list. (It is the destination 
 
 ### Update to vhost settings of your web server
 
-Ensure you can reach your web page via entry url. (https://www.xxxx.com in this example)
+Ensure you can reach your web page via the entry url. (https://www.xxxx.com in this example)
 
+## Example for Nginx
+```
+server {
+    listen 80;
+    listen 443 ssl http2;
+    server_name api.ebclub.com.hk;
+    root "/home/vagrant/Code/www/joaapidemo2/public";
+
+    index index.html index.htm index.php;
+
+    charset utf-8;
+
+    location / {
+        try_files $uri $uri/ /index.php?$query_string;
+        if ($request_method = 'OPTIONS') {
+                add_header 'Access-Control-Allow-Origin' '*' always;
+                add_header 'Access-Control-Allow-Methods' 'GET, POST, DELETE, PUT';
+                add_header 'Access-Control-Allow-Headers' 'DNT,X-Mx-ReqToken,Keep-Alive,User-Agent,X-requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization,X-Auth-Token,Origin';
+                add_header 'Access-Control-Max-Age' 1728000;
+                add_header 'Content-Type' 'text/plain charset=UTF-8';
+                add_header 'Content-Length' 0;
+		                return 204;
+        }
+    }
+
+    location = /favicon.ico { access_log off; log_not_found off; }
+    location = /robots.txt  { access_log off; log_not_found off; }
+
+    access_log off;
+    error_log  /var/log/nginx/joaapidemo2-error.log error;
+
+    sendfile off;
+
+    client_max_body_size 100m;
+
+    location ~ \.php$ {
+        fastcgi_split_path_info ^(.+\.php)(/.+)$;
+        fastcgi_pass unix:/var/run/php/php7.2-fpm.sock;
+        fastcgi_index index.php;
+        include fastcgi_params;
+        fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+
+
+        fastcgi_intercept_errors off;
+	fastcgi_buffer_size 16k;
+        fastcgi_buffers 4 16k;
+        fastcgi_connect_timeout 300;
+        fastcgi_send_timeout 300;
+        fastcgi_read_timeout 300;
+    }
+
+    location ~ /\.ht {
+        deny all;
+    }
+
+```
 
 ### Start
 
