@@ -56,7 +56,9 @@ It is a key required for each Laravel application.
 ```
 /www/joaapidemo$ php artisan key:generate
 ```
-``` Output
+
+Output:
+```
 Application key [base64:0AKzB3gQo5sw6QQ2aEFZ7bVMtFk7aTRJhpwTwLRoLwc=] set successfully.
 ```
 
@@ -80,5 +82,5 @@ https://www.xxxx.com
 ```
 
 It will be redirected to YOOV Login Page. After login, it will be redirected to https://www.xxxx.com/implicit/callback.
-
+![](https://drive.google.com/file/d/1T-hAHtmJK7KNZkCFoQ0VZJQTz5bPkDVS/view?usp=sharing)
 ------------
