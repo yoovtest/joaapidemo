@@ -86,7 +86,7 @@ https://www.xxxx.com/teams | Route to display team list. (It is the destination 
 
 ### Update to vhost settings of your web server
 
-Ensure you can reach ther web page via the entry url. (https://www.xxxx.com in this example)
+Ensure you can reach ther web page via the entry url. (http<span>s://w</span>ww.xxxx.com in this example)
 
 #### Example for Nginx
 /etc/nginx/sites-available/joaapidemo
