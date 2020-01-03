@@ -40,22 +40,22 @@ Field | Value
 --- | ---
 client_id | abcd-12345
 secret | 123456-abcd-efgh-ijkl-7890abc
-scope | oa:team:read, oa:employee:read
-grant type | authorization code
-issuer | https://<span></span>passport.yoov.com/auth/realms/yoov
-authorize Url | https://<span></span>passport.yoov.com/auth/realms/yoov/protocol/openid-connect/auth
-token Url | https://<span></span>passport.yoov.com/auth/realms/yoov/protocol/openid-connect/token
+scope | abc:read, def:read
+grant type | grant_type
+issuer | https://<span></span>www.abc.com/auth/realms/abc
+authorize Url | https://<span></span>www.abc.com/auth/realms/abc/protocol/openid-connect/auth
+token Url | https://<span></span>www.abc.com/auth/realms/abc/protocol/openid-connect/token
 host | http<span>s://www</span>.xxxx.com
 
 Update the OAuth Credentials at the end of the file
 ```
-YOOV_CLIENT_ID='abcd-12345'
-YOOV_CLIENT_SECRET='123456-abcd-efgh-ijkl-7890abc'
-YOOV_REDIRECT_URI='https://www.xxxx.com/implicit/callback'
-YOOV_URL_AUTHORIZE='https://passport.yoov.com/auth/realms/yoov/protocol/openid-connect/auth'
-YOOV_URL_ACCESS_TOKEN='https://passport.yoov.com/auth/realms/yoov/protocol/openid-connect/token'
-YOOV_URL_RESOURCE_OWNER_DETAILS=''
-YOOV_SCOPES='oa:team:read, oa:employee:read'
+YOOV_CLIENT_ID='{CLIENT_ID}'
+YOOV_CLIENT_SECRET='{CLIENT_SECRET}'
+YOOV_REDIRECT_URI='{REDIRECT_URI}'
+YOOV_URL_AUTHORIZE='{URL_AUTHORIZE}'
+YOOV_URL_ACCESS_TOKEN='{URL_ACCESS_TOKEN}'
+YOOV_URL_RESOURCE_OWNER_DETAILS='{URL_RESOURCE_OWNER_DETAILS}'
+YOOV_SCOPES='{SCOPES}'
 ```
 It is important to note that the credentials is binded with host. It must be exactly as that confirmed by provider.
 
