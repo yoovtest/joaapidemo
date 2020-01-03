@@ -12,7 +12,7 @@ Clone the project using Git:
 /www$ cd joaapidemo
 /www/joaapidemo$
 ```
-Install required packages using Composer
+Install required packages using [Composer](https://getcomposer.org/)
    
     /www/joaapidemo$ composer install
    
