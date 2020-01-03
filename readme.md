@@ -82,12 +82,13 @@ https://www.xxxx.com/teams | Route to display team list. (It is the destination 
 Ensure you can reach your web page via the entry url. (https://www.xxxx.com in this example)
 
 ## Example for Nginx
+/etc/nginx/sites-available/joaapidemo
 ```
 server {
     listen 80;
     listen 443 ssl http2;
-    server_name api.ebclub.com.hk;
-    root "/home/vagrant/Code/www/joaapidemo2/public";
+    server_name www.xxxx.com;
+    root "/var/www/joaapidemo/public";
 
     index index.html index.htm index.php;
 
@@ -102,7 +103,7 @@ server {
                 add_header 'Access-Control-Max-Age' 1728000;
                 add_header 'Content-Type' 'text/plain charset=UTF-8';
                 add_header 'Content-Length' 0;
-		                return 204;
+		return 204;
         }
     }
 
@@ -110,7 +111,7 @@ server {
     location = /robots.txt  { access_log off; log_not_found off; }
 
     access_log off;
-    error_log  /var/log/nginx/joaapidemo2-error.log error;
+    error_log  /var/log/nginx/joaapidemo-error.log error;
 
     sendfile off;
 
