@@ -20,11 +20,12 @@ Make a copy of .env from .env.example
 ```
 /www/joaapidemo$ copy .env.example .env
 ```
-Edit `/.env:
+Edit ~/.env:
 ```
 /www/joaapidemo$ vi .env
 ```
-. . .
+Update the OAuth Credentials at the end of the .env
+```
 YOOV_CLIENT_ID='abcd-1234'
 YOOV_CLIENT_SECRET='123456-abcd-efgh-ijkl-7890abc'
 YOOV_REDIRECT_URI='https://www.xxxx.com/implicit/callback'
@@ -32,18 +33,18 @@ YOOV_URL_AUTHORIZE='https://passport.yoov.com/auth/realms/yoov/protocol/openid-c
 YOOV_URL_ACCESS_TOKEN='https://passport.yoov.com/auth/realms/yoov/protocol/openid-connect/token'
 YOOV_URL_RESOURCE_OWNER_DETAILS=''
 YOOV_SCOPES='oa:team:read, oa:employee:read'
-. . .
 ```
 Assume your OAuth credentials provided by API provider as below:
 ```
-client_id: abcd-1234
-secret: 123456-abcd-efgh-ijkl-7890abc
-scope: oa:team:read, oa:employee:read
-grant type: authorization code
-issuer: https://passport.yoov.com/auth/realms/yoov
-authorize Url: https://passport.yoov.com/auth/realms/yoov/protocol/openid-connect/auth
-token Url: https://passport.yoov.com/auth/realms/yoov/protocol/openid-connect/token
-host: https://www.xxxx.com
+-
+client_id|abcd-1234
+secret|123456-abcd-efgh-ijkl-7890abc
+scope|oa:team:read, oa:employee:read
+grant type|authorization code
+issuer: https|//passport.yoov.com/auth/realms/yoov
+authorize Url|https://passport.yoov.com/auth/realms/yoov/protocol/openid-connect/auth
+token Url|https://passport.yoov.com/auth/realms/yoov/protocol/openid-connect/token
+host|https://www.xxxx.com
 ```
 It is important to note that the host used in YOOV_REDIRECT_URI must be exactly the same as that provided.
 Then you can give it by appending the route you wnat to use:
