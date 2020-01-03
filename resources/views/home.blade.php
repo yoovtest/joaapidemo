@@ -28,7 +28,25 @@
     </style>
 </head>
 <body>
-    <div class="card m-3">
+    <div class="container-fluid mt-1">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="m-1">
+                    @if(isset($accessToken))
+                        <a href="/logout" class="btn btn-outline-primary">
+                        Logout
+                        </a>
+                    @else
+                        <a href="/" class="btn btn-outline-primary">
+                        Login
+                        </a>
+                    @endif
+                </div>
+            </div>
+        </div>
+    </div>
+    @if(isset($accessToken))
+        <div class="card m-3">
         <div class="card-body p-0">
             <h5 class="card-title p-2 bg-primary text-white">Access Token</h5>
                 <table class="table-bordered table table-striped token-info-table">
@@ -60,7 +78,7 @@
             </h5>
         </div>
     </div>
-    <div class="card m-3">
+        <div class="card m-3">
         <div class="card-body p-0">
             <h5 class="card-title p-2 bg-secondary text-white">Team List</h5>
                 <table class="table table-striped table-bordered">
@@ -74,7 +92,7 @@
                         <td>Total Employees</td>
                     </tr>
                     @foreach($teams as $team)
-                    <tr>
+                        <tr>
                         <td>{{ $team['id'] }}</td>
                         <td>{{ $team['name'] }}</td>
                         <td>{{ $team['shortName'] }}</td>
@@ -88,10 +106,11 @@
             </h5>
         </div>
     </div>
+    @endif
 
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-          integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-          crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
           integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
           crossorigin="anonymous"></script>

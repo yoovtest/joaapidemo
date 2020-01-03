@@ -21,6 +21,24 @@ class HomeController extends Controller
     ]);
   }
 
+  public function logout() {
+    if (session()->exists('tokenInfo')) {
+      $method = GenericProvider::METHOD_POST;
+      $url = 'https://passport.yoov.com/auth/realms/yoov/protocol/openid-connect/logout';
+
+      $params = [
+        'client_id' => env('YOOV_CLIENT_ID'),
+        'client_secret' => env('YOOV_CLIENT_SECRET'),
+        'refresh_token' => session('tokenInfo')->getRefreshToken(),
+      ];
+      $this->provider->getHttpClient()->request($method, $url, [
+        'form_params' => $params
+      ]);
+    }
+    session()->forget('tokenInfo');
+    return view('home', []);
+  }
+
   public function index()
   {
     $authorizationUrl = $this->provider->getAuthorizationUrl();
