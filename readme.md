@@ -48,7 +48,7 @@ YOOV_URL_ACCESS_TOKEN='https://passport.yoov.com/auth/realms/yoov/protocol/openi
 YOOV_URL_RESOURCE_OWNER_DETAILS=''
 YOOV_SCOPES='oa:team:read, oa:employee:read'
 ```
-It is important to note that the credentials is binded with host. 
+It is important to note that the credentials is binded with host. It must be exactly as that confirmed by provider.
 
 ### Routes
 
@@ -62,5 +62,10 @@ https://www.xxxx.com/ | Entry url to connect with authorization server
 https://www.xxxx.com/implicit/callback | Passive route to receive token from authorization server
 https://www.xxxx.com/teams | Route to display team list. (It is the destination of redirection after token is received)
 
-
+### Start
+In browser, enter the url:
+```
+https://www.xxxx.com
+```
+It will be redirected to YOOV Login Page. After login, it will be redirected to https://www.xxxx.com/implicit/callback.
 ------------
