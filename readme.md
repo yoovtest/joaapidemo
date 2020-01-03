@@ -35,7 +35,6 @@ YOOV_URL_RESOURCE_OWNER_DETAILS=''
 YOOV_SCOPES='oa:team:read, oa:employee:read'
 ```
 Assume your OAuth credentials provided by API provider as below:
-```
 client_id | abcd-1234
 --------- | ---------
 secret | 123456-abcd-efgh-ijkl-7890abc
@@ -45,7 +44,7 @@ issuer | https//passport.yoov.com/auth/realms/yoov
 authorize Url | https://passport.yoov.com/auth/realms/yoov/protocol/openid-connect/auth
 token Url | https://passport.yoov.com/auth/realms/yoov/protocol/openid-connect/token
 host | https://www.xxxx.com
-```
+
 It is important to note that the host used in YOOV_REDIRECT_URI must be exactly the same as that provided.
 Then you can give it by appending the route you wnat to use:
 ```
