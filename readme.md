@@ -6,9 +6,31 @@ It makes use of "thephppleague / oauth2-client" under Laravel framework.
 2. thephphpleague / oauth2-client
 
 ## Install
-Via Composer
-``` sdfdsfs
-$ composer install
+Clone the project using Git:
+```
+/www $ git clone https://github.com/yoovtest/joaapidemo
+/www $ cd joaapidemo
+/www/joaapidemo $
+```
+Install required packages using Composer
+```
+/www/joaapidemo $ composer install
+```
+Make a copy of .env from .env.example
+```
+/www/joaapidemo $ copy .env.example .env
+```
+Edit .env
+```
+...
+YOOV_CLIENT_ID='abcd-1234'
+YOOV_CLIENT_SECRET='123456-abcd-efgh-ijkl-7890abc'
+YOOV_REDIRECT_URI='https://www.xxxx.com/implicit/callback'
+YOOV_URL_AUTHORIZE='https://passport.yoov.com/auth/realms/yoov/protocol/openid-connect/auth'
+YOOV_URL_ACCESS_TOKEN='https://passport.yoov.com/auth/realms/yoov/protocol/openid-connect/token'
+YOOV_URL_RESOURCE_OWNER_DETAILS=''
+YOOV_SCOPES='oa:team:read, oa:employee:read'
+...
 ```
 Edit App/Http/Controllers/HomeController
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as:
