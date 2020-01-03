@@ -50,7 +50,7 @@ host | https:/<span>/<span>ww<span>w.x</span>xxx.com
 Update the OAuth Credentials at the end of the file
 ```
 YOOV_CLIENT_ID='abcd-12345'
-YOOV_CLIENT_SECRET='123456-abcd-efgh-ijkl-7890abc}'
+YOOV_CLIENT_SECRET='123456-abcd-efgh-ijkl-7890abc'
 YOOV_REDIRECT_URI='https://www.xxxx.com/implicit/callback'
 YOOV_URL_AUTHORIZE='https://www.abc.com/auth/realms/abc/protocol/openid-connect/auth'
 YOOV_URL_ACCESS_TOKEN='https://www.abc.com/auth/realms/abc/protocol/openid-connect/token'
