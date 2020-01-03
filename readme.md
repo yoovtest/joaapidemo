@@ -81,8 +81,12 @@ In browser, enter the url:
 https://www.xxxx.com
 ```
 
-It will be redirected to YOOV Login Page. After login, it will be redirected to https://www.xxxx.com/implicit/callback.
+It will be redirected to YOOV Login Page.
 
 ![](https://drive.google.com/uc?export=view&id=1T-hAHtmJK7KNZkCFoQ0VZJQTz5bPkDVS)
 
+ After login, it will be redirected to https://www.xxxx.com/implicit/callback.
+ 
+ ![](https://drive.google.com/uc?export=view&id=1MlWtud5lduqX6dO3wqiuvmylGwE_rS0z)
+ 
 ------------
