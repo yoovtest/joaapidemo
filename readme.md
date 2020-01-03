@@ -157,7 +157,7 @@ It will be redirected to YOOV Login Page.
 
 ![](https://drive.google.com/uc?export=view&id=1T-hAHtmJK7KNZkCFoQ0VZJQTz5bPkDVS)
 
- After login, it will be redirected to https://<span></span>www.xxxx.com/implicit/callback.
+ After login, it will be redirected to https://<span></span>www<span>.xxxx.</span>com/implicit/callback.
  
  ![](https://drive.google.com/uc?export=view&id=1i8NhYwDTl3wiu2R_r7QulX3vUs0y3Uwq)
  
