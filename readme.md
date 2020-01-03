@@ -6,9 +6,11 @@ It makes use of "thephppleague / oauth2-client" under Laravel framework.
 2. thephphpleague / oauth2-client
 
 * It is assumed you are familiar with the following technology:
+```
 1. Laravel
 2. PHP
 3. Web Server (Apache or Nginx)
+```
 
 ## Install
 Clone the project using Git:
