@@ -2,6 +2,7 @@
 
 use Config;
 use \League\OAuth2\Client\Provider\GenericProvider;
+use \Redirect;
 
 class HomeController extends Controller
 {
@@ -49,13 +50,7 @@ class HomeController extends Controller
         $tokenInfo = $this->provider->getAccessToken('authorization_code', [
           'code' => $_GET['code']
         ]);
-        session(['code'=>$_GET['code']]);
-
-        session(['accessToken' => $tokenInfo->getToken()]);
-        session(['refreshToken' => $tokenInfo->getRefreshToken()]);
-        session(['expiredIn' => date('Y-m-d H:i:s', $tokenInfo->getExpires())]);
-        session(['expired' => $tokenInfo->hasExpired()]);
-
+        session(['tokenInfo'=>$tokenInfo]);
         return redirect('/teams');
 
       } catch (\League\OAuth2\Client\Provider\Exception\IdentityProviderException $e) {
@@ -66,12 +61,13 @@ class HomeController extends Controller
   }
 
   public function getTeams() {
+    $this->checkOrRefreshToken();
+    $tokenInfo = session('tokenInfo');
     $result = [
-      'accessToken' =>  session('accessToken'),
-      'refreshToken' => session('refreshToken'),
-      'expiredIn' => session('expiredIn'),
-      'expired' =>  session('expired'),
-
+      'accessToken' =>  $tokenInfo->getToken(),
+      'refreshToken' => $tokenInfo->getRefreshToken(),
+      'expiredIn' => date('Y-m-d H:i:s', $tokenInfo->getExpires()),
+      'expired' => $tokenInfo->hasExpired(),
       'teams' => $this->fetchTeams(),
     ];
 
@@ -80,7 +76,8 @@ class HomeController extends Controller
 
   public function fetchTeams()
   {
-    $token = session('accessToken');
+    $tokenInfo = session('tokenInfo');
+    $token = $tokenInfo->getToken();
 
     $request = $this->provider->getAuthenticatedRequest(GenericProvider::METHOD_GET,
       'https://joa.yoov.com/api/v1/t/teams?page=0&size=10',
@@ -96,6 +93,20 @@ class HomeController extends Controller
     }
     $result = array_key_exists('content', $response) ? $response['content'] : [];
     return $result;
+  }
+
+  private function checkOrRefreshToken() {
+    if (!session()->exists('tokenInfo')) {
+      Redirect::to('/')->send();
+      return redirect('/');
+    }
+    $tokenInfo = session('tokenInfo');
+    if ($tokenInfo->hasExpired()) {
+      $newAccessToken = $this->provider->getAccessToken('refresh_token', [
+        'refresh_token' => $tokenInfo->getRefreshToken()
+      ]);
+      session(['tokenInfo'=>$newAccessToken]);
+    }
   }
 
 }

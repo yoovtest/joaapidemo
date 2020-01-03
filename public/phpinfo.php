@@ -1,4 +1,4 @@
-<h4>yoovtax/public/phpinfo.php</h4>
+<h4><?php echo $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']; ?></h4>
 <?php
 phpinfo();
 ?>
