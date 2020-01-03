@@ -29,6 +29,7 @@ Assume your OAuth credentials provided by API provider as below:
 
 Field | Value
 --- | ---
+client_id | abcd-12345
 secret | 123456-abcd-efgh-ijkl-7890abc
 scope | oa:team:read, oa:employee:read
 grant type | authorization code
