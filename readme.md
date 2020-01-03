@@ -5,7 +5,10 @@ It makes use of "thephppleague / oauth2-client" under Laravel framework.
 1. Laravel 5.5
 2. thephphpleague / oauth2-client
 
-* It is assumed you are familiar with Laravel operation.
+* It is assumed you are familiar with the following technology:
+1. Laravel
+2. PHP
+3. Web Server (Apache or Nginx)
 
 ## Install
 Clone the project using Git:
@@ -79,7 +82,7 @@ https://www.xxxx.com/teams | Route to display team list. (It is the destination 
 
 ### Update to vhost settings of your web server
 
-Ensure you can reach your web page via the entry url. (https://www.xxxx.com in this example)
+Ensure you can reach ther web page via the entry url. (https://www.xxxx.com in this example)
 
 #### Example for Nginx
 /etc/nginx/sites-available/joaapidemo
