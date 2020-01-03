@@ -6,7 +6,6 @@ use \League\OAuth2\Client\Provider\GenericProvider;
 class HomeController extends Controller
 {
   public $provider;
-  public $tokenInfo;
 
   public function __construct()
   {

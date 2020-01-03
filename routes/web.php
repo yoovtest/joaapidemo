@@ -12,6 +12,5 @@
 */
 
 Route::get('/', 'HomeController@index');
-Route::get('/teams', 'HomeController@getTeams');
 Route::get('/implicit/callback', 'HomeController@callback');
-
+Route::get('/teams', 'HomeController@getTeams');
