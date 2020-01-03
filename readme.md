@@ -51,6 +51,10 @@ It is important to note that the credentials is binded with host.
 
 ### Routes
 
+```
+~/App/routes/web.php
+```
+
 Route | Description
 --- | ---
 https://www.xxxx.com/ | Entry url to connect with authorization server
