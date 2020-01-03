@@ -166,7 +166,7 @@ It will be redirected to YOOV Login Page.
  Use debugger in Chrome during access to https://joa.yoov.com.
  Check how each API url being used.
  
- In this project, the Logout function is given as an example. You can refer to the following files for basic operations:
+ In this project, Team access function and Logout function are given as an example. You can study the following files for the operation.:
  ```
  ~/App/Http/Controllers/HomeController.php
  ~/resources/views/home.blade.php
