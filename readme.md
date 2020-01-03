@@ -161,4 +161,18 @@ It will be redirected to YOOV Login Page.
  
  ![](https://drive.google.com/uc?export=view&id=1MlWtud5lduqX6dO3wqiuvmylGwE_rS0z)
  
+ ### Next
+ 
+ Use debugger in Chrome for access to https://joa.yoov.com.
+ Check how each API url being used.
+ 
+ In this project, the Logout function is given as an example. You can refer to the following files for basic operations:
+ ```
+ ~/App/Http/Controllers/HomeController.php
+ ~/resources/views/home.blade.php
+ ~/App/routes/web.php
+ ```
+ 
+ 
+ 
 ------------
