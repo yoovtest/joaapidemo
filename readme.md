@@ -36,8 +36,8 @@ YOOV_SCOPES='oa:team:read, oa:employee:read'
 ```
 Assume your OAuth credentials provided by API provider as below:
 ```
--
 client_id | abcd-1234
+--------- | ---------
 secret | 123456-abcd-efgh-ijkl-7890abc
 scope | oa:team:read, oa:employee:read
 grant type | authorization code
