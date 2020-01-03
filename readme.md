@@ -63,9 +63,12 @@ https://www.xxxx.com/implicit/callback | Passive route to receive token from aut
 https://www.xxxx.com/teams | Route to display team list. (It is the destination of redirection after token is received)
 
 ### Start
+
 In browser, enter the url:
 ```
 https://www.xxxx.com
 ```
+
 It will be redirected to YOOV Login Page. After login, it will be redirected to https://www.xxxx.com/implicit/callback.
+
 ------------
