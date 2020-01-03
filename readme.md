@@ -49,13 +49,13 @@ host | http<span>s://</span>www.xxxx.com
 
 Update the OAuth Credentials at the end of the file
 ```
-YOOV_CLIENT_ID='{CLIENT_ID}'
-YOOV_CLIENT_SECRET='{CLIENT_SECRET}'
-YOOV_REDIRECT_URI='{REDIRECT_URI}'
-YOOV_URL_AUTHORIZE='{URL_AUTHORIZE}'
-YOOV_URL_ACCESS_TOKEN='{URL_ACCESS_TOKEN}'
-YOOV_URL_RESOURCE_OWNER_DETAILS='{URL_RESOURCE_OWNER_DETAILS}'
-YOOV_SCOPES='{SCOPES}'
+YOOV_CLIENT_ID='abcd-12345'
+YOOV_CLIENT_SECRET='123456-abcd-efgh-ijkl-7890abc}'
+YOOV_REDIRECT_URI='https:/<span>/www.x</span>xxx.com/implicit/callback'
+YOOV_URL_AUTHORIZE='http<span>s://</span>www.abc.com/auth/realms/abc/protocol/openid-connect/auth'
+YOOV_URL_ACCESS_TOKEN='http<span>s://</span>www.abc.com/auth/realms/abc/protocol/openid-connect/token'
+YOOV_URL_RESOURCE_OWNER_DETAILS=''
+YOOV_SCOPES='abc:read, def:read'
 ```
 It is important to note that the credentials is binded with host. It must be exactly as that confirmed by provider.
 
