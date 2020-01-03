@@ -20,7 +20,9 @@ Make a copy of .env from .env.example
 ```
 /www/joaapidemo $ copy .env.example .env
 ```
-Edit .env
+Edit `/.env:
+```
+/www/joaapidemo$ vi .env
 ```
 ...
 YOOV_CLIENT_ID='abcd-1234'
@@ -32,6 +34,27 @@ YOOV_URL_RESOURCE_OWNER_DETAILS=''
 YOOV_SCOPES='oa:team:read, oa:employee:read'
 ...
 ```
+Assume your OAuth credentials provided by API provider as below:
+```
+client_id: abcd-1234
+secret: 123456-abcd-efgh-ijkl-7890abc
+scope: oa:team:read, oa:employee:read
+grant type: authorization code
+issuer: https://passport.yoov.com/auth/realms/yoov
+authorize Url: https://passport.yoov.com/auth/realms/yoov/protocol/openid-connect/auth
+token Url: https://passport.yoov.com/auth/realms/yoov/protocol/openid-connect/token
+host: https://www.xxxx.com
+```
+It is important to note that the host used in YOOV_REDIRECT_URI must be exactly the same as that provided.
+Then you can give it by appending the route you wnat to use:
+```
+https://www.xxxx.com/callback
+https://www.xxxx.com/implicit/callback
+https://www.xxxx.com/myroute
+...
+```
+Edit ~/App/Routes:
+
 Edit App/Http/Controllers/HomeController
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as:
 
