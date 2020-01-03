@@ -47,41 +47,15 @@ YOOV_URL_ACCESS_TOKEN='https://passport.yoov.com/auth/realms/yoov/protocol/openi
 YOOV_URL_RESOURCE_OWNER_DETAILS=''
 YOOV_SCOPES='oa:team:read, oa:employee:read'
 ```
-It is important to note that the host used in YOOV_REDIRECT_URI must be exactly the same as that provided. If you want the route of callback url is "/implicit/callback", you can set it as:
-```
-https://www.xxxx.com/implicit/callback
-```
-Edit ~/App/Routes:
-```
-/www/joaapidemo/App/Routes $ vi web.php
-```
+It is important to note that the credentials is binded with host. 
 
-```
-<?php
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
-
-Route::get('/', 'HomeController@index');
-Route::get('/implicit/callback', 'HomeController@callback');
-Route::get('/teams', 'HomeController@getTeams');
-
-```
-
-The routes defined are:
-(Assume the host is https://www.xxxx.com)
+### Routes
 
 Route | Description
 --- | ---
 https://www.xxxx.com/ | Entry url to connect with authorization server
 https://www.xxx.com/implicit/callback | Passive route to receive token from authorization server
 https://www.xxx.com/teams | Route to display team list. (It is the destination of redirection after token is received)
+
 
 ------------
