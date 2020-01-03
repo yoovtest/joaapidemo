@@ -34,17 +34,17 @@ secret | 123456-abcd-efgh-ijkl-7890abc
 scope | oa:team:read, oa:employee:read
 grant type | authorization code
 issuer | https://<span></span>passport.yoov.com/auth/realms/yoov
-authorize Url | https://passport.yoov.com/auth/realms/yoov/protocol/openid-connect/auth
-token Url | https://passport.yoov.com/auth/realms/yoov/protocol/openid-connect/token
-host | https://www.xxxx.com
+authorize Url | https://<span></span>passport.yoov.com/auth/realms/yoov/protocol/openid-connect/auth
+token Url | https://<span></span>passport.yoov.com/auth/realms/yoov/protocol/openid-connect/token
+host | https://<span></span>www.xxxx.com
 
 Update the OAuth Credentials at the end of the file
 ```
 YOOV_CLIENT_ID='**abcd-12345**'
 YOOV_CLIENT_SECRET='123456-abcd-efgh-ijkl-7890abc'
-YOOV_REDIRECT_URI='https://www.xxxx.com/implicit/callback'
-YOOV_URL_AUTHORIZE='https://passport.yoov.com/auth/realms/yoov/protocol/openid-connect/auth'
-YOOV_URL_ACCESS_TOKEN='https://passport.yoov.com/auth/realms/yoov/protocol/openid-connect/token'
+YOOV_REDIRECT_URI='https://<span></span>www.xxxx.com/implicit/callback'
+YOOV_URL_AUTHORIZE='https://<span></span>passport.yoov.com/auth/realms/yoov/protocol/openid-connect/auth'
+YOOV_URL_ACCESS_TOKEN='https://<span></span>passport.yoov.com/auth/realms/yoov/protocol/openid-connect/token'
 YOOV_URL_RESOURCE_OWNER_DETAILS=''
 YOOV_SCOPES='oa:team:read, oa:employee:read'
 ```
@@ -70,22 +70,22 @@ Application key [base64:0AKzB3gQo5sw6QQ2aEFZ7bVMtFk7aTRJhpwTwLRoLwc=] set succes
 
 Route | Description
 --- | ---
-https://www.xxxx.com/ | Entry url to connect with authorization server
-https://www.xxxx.com/implicit/callback | Passive route to receive token from authorization server
-https://www.xxxx.com/teams | Route to display team list. (It is the destination of redirection after token is received)
+https://<span></span>www.xxxx.com/ | Entry url to connect with authorization server
+https://<span></span>www.xxxx.com/implicit/callback | Passive route to receive token from authorization server
+https://<span></span>www.xxxx.com/teams | Route to display team list. (It is the destination of redirection after token is received)
 
 ### Start
 
 In browser, enter the url:
 ```
-https://www.xxxx.com
+https://<span></span>www.xxxx.com
 ```
 
 It will be redirected to YOOV Login Page.
 
 ![](https://drive.google.com/uc?export=view&id=1T-hAHtmJK7KNZkCFoQ0VZJQTz5bPkDVS)
 
- After login, it will be redirected to https://www.xxxx.com/implicit/callback.
+ After login, it will be redirected to https://<span></span>www.xxxx.com/implicit/callback.
  
  ![](https://drive.google.com/uc?export=view&id=1MlWtud5lduqX6dO3wqiuvmylGwE_rS0z)
  
