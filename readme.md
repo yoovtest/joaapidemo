@@ -42,10 +42,10 @@ client_id | abcd-12345
 secret | 123456-abcd-efgh-ijkl-7890abc
 scope | abc:read, def:read
 grant type | grant_type
-issuer | http<span>s://www.</span>abc.com/auth/realms/abc
-authorize Url | http<span>s://www.</span>abc.com/auth/realms/abc/protocol/openid-connect/auth
-token Url | http<span>s://www.</span>abc.com/auth/realms/abc/protocol/openid-connect/token
-host | http<span>s://www</span>.xxxx.com
+issuer | http<span>s://</span>www.abc.com/auth/realms/abc
+authorize Url | http<span>s://</span>www.abc.com/auth/realms/abc/protocol/openid-connect/auth
+token Url | http<span>s://</span>www.abc.com/auth/realms/abc/protocol/openid-connect/token
+host | http<span>s://</span>www.xxxx.com
 
 Update the OAuth Credentials at the end of the file
 ```
