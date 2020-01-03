@@ -42,9 +42,9 @@ Update the OAuth Credentials at the end of the file
 ```
 YOOV_CLIENT_ID='abcd-12345'
 YOOV_CLIENT_SECRET='123456-abcd-efgh-ijkl-7890abc'
-YOOV_REDIRECT_URI='https://<span></span>www.xxxx.com/implicit/callback'
-YOOV_URL_AUTHORIZE='https://<span></span>passport.yoov.com/auth/realms/yoov/protocol/openid-connect/auth'
-YOOV_URL_ACCESS_TOKEN='https://<span></span>passport.yoov.com/auth/realms/yoov/protocol/openid-connect/token'
+YOOV_REDIRECT_URI='https://www.xxxx.com/implicit/callback'
+YOOV_URL_AUTHORIZE='https://passport.yoov.com/auth/realms/yoov/protocol/openid-connect/auth'
+YOOV_URL_ACCESS_TOKEN='https://passport.yoov.com/auth/realms/yoov/protocol/openid-connect/token'
 YOOV_URL_RESOURCE_OWNER_DETAILS=''
 YOOV_SCOPES='oa:team:read, oa:employee:read'
 ```
